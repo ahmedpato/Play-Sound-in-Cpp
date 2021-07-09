@@ -1,13 +1,11 @@
 #include <iostream>
-#include <mmsystem.h>
 #include <windows.h>
-#include <stdlib.h>
+#include <MMsystem.h>
+#pragma comment(lib,"winmm.lib)
 
 using namespace std;
 
 int main()
 {
-  PlaySound(TEXT("file name.wav"),NULL , FILENAME | SND_SYNC);
-  system("pause");
-  return 0;
+    PlaySound("1.wav",NULL,SND_FILENAME|SND_ASYNC|SND_LOOP);
 }
